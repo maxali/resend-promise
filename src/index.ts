@@ -21,7 +21,7 @@ export interface IRetryParamsConfig {
 
 export type RetryValidator<T> = (res: T, params: Partial<IRetryParamsConfig>) => boolean;
 
-interface IRetryParams<T> extends IRetryParamsConfig{
+export interface IRetryParams<T> extends IRetryParamsConfig{
   validate?: RetryValidator<T>;
 }
 
@@ -30,7 +30,13 @@ const DELAY = 300;
 const X_BACK_OFF = false;
 const BACK_OFF_BY = 2;
 
-export default function resend<T>(fn: () => Promise<T>, params: IRetryParams<T> = {
+/**
+ * resend calls your async functions and retires based on IRetryParams
+ * @param fn async function
+ * @param params
+ * @returns {Promise<T>}
+ */
+export function resend<T>(fn: () => Promise<T>, params: IRetryParams<T> = {
    delay: 300, retries: 3, xBackOff: false, backOffBy: 2
 }) {
   let progress = 0;

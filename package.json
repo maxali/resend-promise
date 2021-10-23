@@ -4,11 +4,13 @@
   "description": "Retry async/promise",
   "main": "dest/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs": "typedoc src/index.ts  --name 'Resend Promise'"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "typedoc": "^0.22.6",
     "typescript": "^4.4.4"
   }
 }
