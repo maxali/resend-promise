@@ -1,0 +1,14 @@
+{
+  "name": "resend-promise",
+  "version": "0.0.4",
+  "description": "Retry async/promise",
+  "main": "dest/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.4.4"
+  }
+}
