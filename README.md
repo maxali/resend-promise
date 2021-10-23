@@ -9,10 +9,7 @@ Retry and resend async/Promise requests
 ```
 
 # Usage
-See following usage examples
-
-## Fej.setInit
-Set some static headers
+Simply pass your async function as parameter
 
 ```javascript
   import resend from "resend-promise";
