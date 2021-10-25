@@ -71,8 +71,7 @@ export function resend<T>(fn: () => Promise<T>, params: IRetryParams<T> = {
           }
 
       } catch(err) {
-          console.log(err)
-          if (retries == 1) {
+          if (progress == retries) {
             return reject(err);
           }
       }
