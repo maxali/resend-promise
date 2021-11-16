@@ -1,12 +1,12 @@
 {
   "name": "resend-promise",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Retry async/promise",
   "main": "dest/index.js",
   "scripts": {
     "test": "jest",
     "build": "tsc -p .",
-    "docs": "typedoc src/index.ts  --name 'Resend Promise'"
+    "docs": "typedoc src/index.ts"
   },
   "author": "",
   "license": "ISC",

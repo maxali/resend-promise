@@ -63,7 +63,7 @@ export function resend<T>(fn: () => Promise<T>, params: IRetryParams<T> = {
           if (validate(fnRes, {retries, delay: currentDelay}) == true) {
               // clean up the while loop
               progress = retries;
-              resolve(fnRes);
+              return resolve(fnRes);
           } else {
               if (progress == retries) {
                 return reject(new Error("last retry rejected"));
